@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D81A82CE2749A87F00874B0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82CD2749A87F00874B0B /* AppDelegate.swift */; };
+		D81A82D02749A87F00874B0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82CF2749A87F00874B0B /* SceneDelegate.swift */; };
+		D81A82D22749A87F00874B0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82D12749A87F00874B0B /* ViewController.swift */; };
+		D81A82D52749A87F00874B0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81A82D32749A87F00874B0B /* Main.storyboard */; };
+		D81A82D82749A87F00874B0B /* AetnaTakeHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D81A82D62749A87F00874B0B /* AetnaTakeHome.xcdatamodeld */; };
+		D81A82DA2749A88100874B0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81A82D92749A88100874B0B /* Assets.xcassets */; };
+		D81A82DD2749A88100874B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81A82DB2749A88100874B0B /* LaunchScreen.storyboard */; };
+		D81A82E82749A88100874B0B /* AetnaTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82E72749A88100874B0B /* AetnaTakeHomeTests.swift */; };
+		D81A82F22749A88100874B0B /* AetnaTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82F12749A88100874B0B /* AetnaTakeHomeUITests.swift */; };
+		D81A82F42749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82F32749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D81A82E42749A88100874B0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D81A82C22749A87F00874B0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D81A82C92749A87F00874B0B;
+			remoteInfo = AetnaTakeHome;
+		};
+		D81A82EE2749A88100874B0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D81A82C22749A87F00874B0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D81A82C92749A87F00874B0B;
+			remoteInfo = AetnaTakeHome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D81A82CA2749A87F00874B0B /* AetnaTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AetnaTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D81A82CD2749A87F00874B0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D81A82CF2749A87F00874B0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D81A82D12749A87F00874B0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D81A82D42749A87F00874B0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D81A82D72749A87F00874B0B /* AetnaTakeHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AetnaTakeHome.xcdatamodel; sourceTree = "<group>"; };
+		D81A82D92749A88100874B0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D81A82DC2749A88100874B0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D81A82DE2749A88100874B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D81A82E32749A88100874B0B /* AetnaTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AetnaTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D81A82E72749A88100874B0B /* AetnaTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetnaTakeHomeTests.swift; sourceTree = "<group>"; };
+		D81A82ED2749A88100874B0B /* AetnaTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AetnaTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D81A82F12749A88100874B0B /* AetnaTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetnaTakeHomeUITests.swift; sourceTree = "<group>"; };
+		D81A82F32749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetnaTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D81A82C72749A87F00874B0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81A82E02749A88100874B0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81A82EA2749A88100874B0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D81A82C12749A87F00874B0B = {
+			isa = PBXGroup;
+			children = (
+				D81A82CC2749A87F00874B0B /* AetnaTakeHome */,
+				D81A82E62749A88100874B0B /* AetnaTakeHomeTests */,
+				D81A82F02749A88100874B0B /* AetnaTakeHomeUITests */,
+				D81A82CB2749A87F00874B0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D81A82CB2749A87F00874B0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D81A82CA2749A87F00874B0B /* AetnaTakeHome.app */,
+				D81A82E32749A88100874B0B /* AetnaTakeHomeTests.xctest */,
+				D81A82ED2749A88100874B0B /* AetnaTakeHomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D81A82CC2749A87F00874B0B /* AetnaTakeHome */ = {
+			isa = PBXGroup;
+			children = (
+				D81A82CD2749A87F00874B0B /* AppDelegate.swift */,
+				D81A82CF2749A87F00874B0B /* SceneDelegate.swift */,
+				D81A82D12749A87F00874B0B /* ViewController.swift */,
+				D81A82D32749A87F00874B0B /* Main.storyboard */,
+				D81A82D92749A88100874B0B /* Assets.xcassets */,
+				D81A82DB2749A88100874B0B /* LaunchScreen.storyboard */,
+				D81A82DE2749A88100874B0B /* Info.plist */,
+				D81A82D62749A87F00874B0B /* AetnaTakeHome.xcdatamodeld */,
+			);
+			path = AetnaTakeHome;
+			sourceTree = "<group>";
+		};
+		D81A82E62749A88100874B0B /* AetnaTakeHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D81A82E72749A88100874B0B /* AetnaTakeHomeTests.swift */,
+			);
+			path = AetnaTakeHomeTests;
+			sourceTree = "<group>";
+		};
+		D81A82F02749A88100874B0B /* AetnaTakeHomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D81A82F12749A88100874B0B /* AetnaTakeHomeUITests.swift */,
+				D81A82F32749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift */,
+			);
+			path = AetnaTakeHomeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D81A82C92749A87F00874B0B /* AetnaTakeHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D81A82F72749A88100874B0B /* Build configuration list for PBXNativeTarget "AetnaTakeHome" */;
+			buildPhases = (
+				D81A82C62749A87F00874B0B /* Sources */,
+				D81A82C72749A87F00874B0B /* Frameworks */,
+				D81A82C82749A87F00874B0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AetnaTakeHome;
+			productName = AetnaTakeHome;
+			productReference = D81A82CA2749A87F00874B0B /* AetnaTakeHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D81A82E22749A88100874B0B /* AetnaTakeHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D81A82FA2749A88100874B0B /* Build configuration list for PBXNativeTarget "AetnaTakeHomeTests" */;
+			buildPhases = (
+				D81A82DF2749A88100874B0B /* Sources */,
+				D81A82E02749A88100874B0B /* Frameworks */,
+				D81A82E12749A88100874B0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D81A82E52749A88100874B0B /* PBXTargetDependency */,
+			);
+			name = AetnaTakeHomeTests;
+			productName = AetnaTakeHomeTests;
+			productReference = D81A82E32749A88100874B0B /* AetnaTakeHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D81A82EC2749A88100874B0B /* AetnaTakeHomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D81A82FD2749A88100874B0B /* Build configuration list for PBXNativeTarget "AetnaTakeHomeUITests" */;
+			buildPhases = (
+				D81A82E92749A88100874B0B /* Sources */,
+				D81A82EA2749A88100874B0B /* Frameworks */,
+				D81A82EB2749A88100874B0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D81A82EF2749A88100874B0B /* PBXTargetDependency */,
+			);
+			name = AetnaTakeHomeUITests;
+			productName = AetnaTakeHomeUITests;
+			productReference = D81A82ED2749A88100874B0B /* AetnaTakeHomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D81A82C22749A87F00874B0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					D81A82C92749A87F00874B0B = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					D81A82E22749A88100874B0B = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D81A82C92749A87F00874B0B;
+					};
+					D81A82EC2749A88100874B0B = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D81A82C92749A87F00874B0B;
+					};
+				};
+			};
+			buildConfigurationList = D81A82C52749A87F00874B0B /* Build configuration list for PBXProject "AetnaTakeHome" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D81A82C12749A87F00874B0B;
+			productRefGroup = D81A82CB2749A87F00874B0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D81A82C92749A87F00874B0B /* AetnaTakeHome */,
+				D81A82E22749A88100874B0B /* AetnaTakeHomeTests */,
+				D81A82EC2749A88100874B0B /* AetnaTakeHomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D81A82C82749A87F00874B0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D81A82DD2749A88100874B0B /* LaunchScreen.storyboard in Resources */,
+				D81A82DA2749A88100874B0B /* Assets.xcassets in Resources */,
+				D81A82D52749A87F00874B0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81A82E12749A88100874B0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81A82EB2749A88100874B0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D81A82C62749A87F00874B0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D81A82D22749A87F00874B0B /* ViewController.swift in Sources */,
+				D81A82D82749A87F00874B0B /* AetnaTakeHome.xcdatamodeld in Sources */,
+				D81A82CE2749A87F00874B0B /* AppDelegate.swift in Sources */,
+				D81A82D02749A87F00874B0B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81A82DF2749A88100874B0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D81A82E82749A88100874B0B /* AetnaTakeHomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81A82E92749A88100874B0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D81A82F42749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift in Sources */,
+				D81A82F22749A88100874B0B /* AetnaTakeHomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D81A82E52749A88100874B0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D81A82C92749A87F00874B0B /* AetnaTakeHome */;
+			targetProxy = D81A82E42749A88100874B0B /* PBXContainerItemProxy */;
+		};
+		D81A82EF2749A88100874B0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D81A82C92749A87F00874B0B /* AetnaTakeHome */;
+			targetProxy = D81A82EE2749A88100874B0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D81A82D32749A87F00874B0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D81A82D42749A87F00874B0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D81A82DB2749A88100874B0B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D81A82DC2749A88100874B0B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D81A82F52749A88100874B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D81A82F62749A88100874B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D81A82F82749A88100874B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BKJW7G94K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AetnaTakeHome/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JJH.AetnaTakeHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D81A82F92749A88100874B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BKJW7G94K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AetnaTakeHome/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JJH.AetnaTakeHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D81A82FB2749A88100874B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BKJW7G94K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JJH.AetnaTakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AetnaTakeHome.app/AetnaTakeHome";
+			};
+			name = Debug;
+		};
+		D81A82FC2749A88100874B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BKJW7G94K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JJH.AetnaTakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AetnaTakeHome.app/AetnaTakeHome";
+			};
+			name = Release;
+		};
+		D81A82FE2749A88100874B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BKJW7G94K;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JJH.AetnaTakeHomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AetnaTakeHome;
+			};
+			name = Debug;
+		};
+		D81A82FF2749A88100874B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BKJW7G94K;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JJH.AetnaTakeHomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AetnaTakeHome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D81A82C52749A87F00874B0B /* Build configuration list for PBXProject "AetnaTakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D81A82F52749A88100874B0B /* Debug */,
+				D81A82F62749A88100874B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D81A82F72749A88100874B0B /* Build configuration list for PBXNativeTarget "AetnaTakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D81A82F82749A88100874B0B /* Debug */,
+				D81A82F92749A88100874B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D81A82FA2749A88100874B0B /* Build configuration list for PBXNativeTarget "AetnaTakeHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D81A82FB2749A88100874B0B /* Debug */,
+				D81A82FC2749A88100874B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D81A82FD2749A88100874B0B /* Build configuration list for PBXNativeTarget "AetnaTakeHomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D81A82FE2749A88100874B0B /* Debug */,
+				D81A82FF2749A88100874B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D81A82D62749A87F00874B0B /* AetnaTakeHome.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D81A82D72749A87F00874B0B /* AetnaTakeHome.xcdatamodel */,
+			);
+			currentVersion = D81A82D72749A87F00874B0B /* AetnaTakeHome.xcdatamodel */;
+			path = AetnaTakeHome.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D81A82C22749A87F00874B0B /* Project object */;
+}
