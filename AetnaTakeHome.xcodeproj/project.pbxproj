@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D81A82CE2749A87F00874B0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82CD2749A87F00874B0B /* AppDelegate.swift */; };
 		D81A82D02749A87F00874B0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82CF2749A87F00874B0B /* SceneDelegate.swift */; };
-		D81A82D22749A87F00874B0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82D12749A87F00874B0B /* ViewController.swift */; };
 		D81A82D52749A87F00874B0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81A82D32749A87F00874B0B /* Main.storyboard */; };
 		D81A82D82749A87F00874B0B /* AetnaTakeHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D81A82D62749A87F00874B0B /* AetnaTakeHome.xcdatamodeld */; };
 		D81A82DA2749A88100874B0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81A82D92749A88100874B0B /* Assets.xcassets */; };
@@ -17,6 +16,10 @@
 		D81A82E82749A88100874B0B /* AetnaTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82E72749A88100874B0B /* AetnaTakeHomeTests.swift */; };
 		D81A82F22749A88100874B0B /* AetnaTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82F12749A88100874B0B /* AetnaTakeHomeUITests.swift */; };
 		D81A82F42749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A82F32749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift */; };
+		D81A83032749B13C00874B0B /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A83022749B13C00874B0B /* ImageSearchViewController.swift */; };
+		D81A83062749B32500874B0B /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A83052749B32500874B0B /* FlickrAPI.swift */; };
+		D81A830A2749B51A00874B0B /* RecentUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A83092749B51A00874B0B /* RecentUpload.swift */; };
+		D81A830D2749EEE300874B0B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A830C2749EEE300874B0B /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,6 @@
 		D81A82CA2749A87F00874B0B /* AetnaTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AetnaTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81A82CD2749A87F00874B0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D81A82CF2749A87F00874B0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D81A82D12749A87F00874B0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D81A82D42749A87F00874B0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D81A82D72749A87F00874B0B /* AetnaTakeHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AetnaTakeHome.xcdatamodel; sourceTree = "<group>"; };
 		D81A82D92749A88100874B0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		D81A82ED2749A88100874B0B /* AetnaTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AetnaTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81A82F12749A88100874B0B /* AetnaTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetnaTakeHomeUITests.swift; sourceTree = "<group>"; };
 		D81A82F32749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetnaTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D81A83022749B13C00874B0B /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
+		D81A83052749B32500874B0B /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		D81A83092749B51A00874B0B /* RecentUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUpload.swift; sourceTree = "<group>"; };
+		D81A830C2749EEE300874B0B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,12 @@
 		D81A82CC2749A87F00874B0B /* AetnaTakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				D81A830B2749EE9300874B0B /* View */,
+				D81A83082749B4FC00874B0B /* Model */,
 				D81A82CD2749A87F00874B0B /* AppDelegate.swift */,
 				D81A82CF2749A87F00874B0B /* SceneDelegate.swift */,
-				D81A82D12749A87F00874B0B /* ViewController.swift */,
 				D81A82D32749A87F00874B0B /* Main.storyboard */,
+				D81A83022749B13C00874B0B /* ImageSearchViewController.swift */,
 				D81A82D92749A88100874B0B /* Assets.xcassets */,
 				D81A82DB2749A88100874B0B /* LaunchScreen.storyboard */,
 				D81A82DE2749A88100874B0B /* Info.plist */,
@@ -128,6 +136,23 @@
 				D81A82F32749A88100874B0B /* AetnaTakeHomeUITestsLaunchTests.swift */,
 			);
 			path = AetnaTakeHomeUITests;
+			sourceTree = "<group>";
+		};
+		D81A83082749B4FC00874B0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D81A83052749B32500874B0B /* FlickrAPI.swift */,
+				D81A83092749B51A00874B0B /* RecentUpload.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D81A830B2749EE9300874B0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D81A830C2749EEE300874B0B /* ImageCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D81A82D22749A87F00874B0B /* ViewController.swift in Sources */,
+				D81A83062749B32500874B0B /* FlickrAPI.swift in Sources */,
+				D81A830D2749EEE300874B0B /* ImageCell.swift in Sources */,
+				D81A83032749B13C00874B0B /* ImageSearchViewController.swift in Sources */,
 				D81A82D82749A87F00874B0B /* AetnaTakeHome.xcdatamodeld in Sources */,
 				D81A82CE2749A87F00874B0B /* AppDelegate.swift in Sources */,
 				D81A82D02749A87F00874B0B /* SceneDelegate.swift in Sources */,
+				D81A830A2749B51A00874B0B /* RecentUpload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +488,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -488,7 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
