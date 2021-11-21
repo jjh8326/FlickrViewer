@@ -12,10 +12,10 @@ class ImageSearchViewController: UICollectionViewController {
     private let reuseIdentifier = "viewCell"
     private var searchItems: [RecentUpload] = [RecentUpload]()
     
-    private let itemsPerRow: CGFloat = 2
+    private let itemsPerRow: CGFloat = 1
     
     private let sectionInsets = UIEdgeInsets(
-        top: 20,
+        top: 20.0,
         left: 20.0,
         bottom: 50.0,
         right: 20.0)
@@ -28,15 +28,6 @@ class ImageSearchViewController: UICollectionViewController {
 
         // Register cell classes
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
-        
-//        FlickrAPI.getGetRecentUploadsWith(searchTerm: "grass") { result in
-//            let searchItems = result
-//            DispatchQueue.main.async {
-//                //Reload collection view
-//            }
-//        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -58,6 +49,12 @@ class ImageSearchViewController: UICollectionViewController {
         cell.backgroundColor = .white
         let searchItem = searchItems[indexPath.row]
         
+        cell.imageTitle.text = searchItem.title
+        
+        //TOOD: Get the dimensions
+        
+        //cell.imageSizeDesc.text = searchItem.description
+        
         //Get download link
         //TODO: Constants
         
@@ -71,6 +68,12 @@ class ImageSearchViewController: UICollectionViewController {
             DispatchQueue.main.async {
                 activityIndicator.stopAnimating()
                 cell.imageView.image = result
+                
+                //TODO: Delete shadow code
+                cell.imageView.image = cell.imageView.image?.addShadow()
+                
+                //TODO: When new search go to top of view!
+                
             }
         }
     
@@ -100,6 +103,7 @@ extension ImageSearchViewController: UITextFieldDelegate {
             }
         }
         
+        //TODO: Set a title so user knows what they searched
         textField.text = nil
         textField.resignFirstResponder()
         

@@ -20,6 +20,7 @@
 		D81A83062749B32500874B0B /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A83052749B32500874B0B /* FlickrAPI.swift */; };
 		D81A830A2749B51A00874B0B /* RecentUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A83092749B51A00874B0B /* RecentUpload.swift */; };
 		D81A830D2749EEE300874B0B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A830C2749EEE300874B0B /* ImageCell.swift */; };
+		D81A8313274AB53D00874B0B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A8312274AB53D00874B0B /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D81A83052749B32500874B0B /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		D81A83092749B51A00874B0B /* RecentUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUpload.swift; sourceTree = "<group>"; };
 		D81A830C2749EEE300874B0B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		D81A8312274AB53D00874B0B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		D81A82CC2749A87F00874B0B /* AetnaTakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				D81A8311274AB51D00874B0B /* Extensions */,
 				D81A830B2749EE9300874B0B /* View */,
 				D81A83082749B4FC00874B0B /* Model */,
 				D81A82CD2749A87F00874B0B /* AppDelegate.swift */,
@@ -153,6 +156,14 @@
 				D81A830C2749EEE300874B0B /* ImageCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D81A8311274AB51D00874B0B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D81A8312274AB53D00874B0B /* UIImageExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				D81A82CE2749A87F00874B0B /* AppDelegate.swift in Sources */,
 				D81A82D02749A87F00874B0B /* SceneDelegate.swift in Sources */,
 				D81A830A2749B51A00874B0B /* RecentUpload.swift in Sources */,
+				D81A8313274AB53D00874B0B /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
