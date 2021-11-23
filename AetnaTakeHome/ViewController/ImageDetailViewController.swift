@@ -25,38 +25,27 @@ class ImageDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        //TODO: This view is ugly
-        //TODO: Constraints are bad
         //TODO: Use loading indicator
         
-//        let margins = imageView.layoutMarginsGuide
-//        imageView.leadingAnchor.constraint(equalTo:  margins.leadingAnchor, constant: 5).isActive = true
-//        imageView.trailingAnchor.constraint(equalTo:  margins.trailingAnchor, constant: 5).isActive = true
-        
-        //Set our anchors to the image width and height (need to pass this in)
-        
-        
-        let widthString = self.selectedImage.width
-        let heightString = self.selectedImage.height
-        var width: CGFloat = 0.0
-        var height: CGFloat = 0.0
-        
-        if let w = NumberFormatter().number(from: widthString) {
-            width = CGFloat(truncating: w)
-        }
-        
-        if let h = NumberFormatter().number(from: heightString) {
-            height = CGFloat(truncating: h)
-        }
-        
-        //Set the constraints to the image
-        NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: width),
-            imageView.heightAnchor.constraint(equalToConstant: height)
-        ])
-        
-        
-        
+        //TODO: Test without this code and delete
+//        let widthString = self.selectedImage.width
+//        let heightString = self.selectedImage.height
+//        var width: CGFloat = 0.0
+//        var height: CGFloat = 0.0
+//
+//        if let w = NumberFormatter().number(from: widthString) {
+//            width = CGFloat(truncating: w)
+//        }
+//
+//        if let h = NumberFormatter().number(from: heightString) {
+//            height = CGFloat(truncating: h)
+//        }
+//
+//        //Set the constraints to the image
+//        NSLayoutConstraint.activate([
+//            imageView.widthAnchor.constraint(equalToConstant: width),
+//            imageView.heightAnchor.constraint(equalToConstant: height)
+//        ])
         
         //TODO: Use an image cache
 

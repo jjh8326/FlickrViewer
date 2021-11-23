@@ -87,6 +87,7 @@ class RecentUpload {
     
     //TODO: Stress test this class, use indices check
     
+    //Note: I am pretty sure that this data is innaccurate, this may be user entered and not the correct width of the image
     private static func getWidth(apiText: String) -> String? {
         let components = apiText.components(separatedBy: " ")
 
@@ -105,6 +106,7 @@ class RecentUpload {
         return widthString
     }
     
+    //Note: I am pretty sure that this data is innaccurate, this may be user entered and not the correct height of the image
     private static func getHeight(apiText: String) -> String? {
         let components = apiText.components(separatedBy: " ")
 
