@@ -62,7 +62,7 @@ class ImageDetailViewController: UIViewController {
                 //TODO: Consider moving this out of dispatch queue
                 //TODO: Attributed text
 
-                self.imageDetails.sizeToFit()
+                //self.imageDetails.sizeToFit()
                 
                 self.imageDetails.layer.borderWidth = 2
                 
@@ -137,13 +137,5 @@ class ImageDetailViewController: UIViewController {
                 self.imageDetails.attributedText = imageDetailsAttributedText
             }
         }
-    }
-}
-
-//NOTE: The tappable link code does not seem to work in the simulator, I can not test on my phone because it is old and not updated
-extension ImageDetailViewController: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        UIApplication.shared.open(URL)
-        return false
     }
 }

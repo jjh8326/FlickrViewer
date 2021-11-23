@@ -12,11 +12,14 @@ class FlickrAPI {
     static let flickrURL = "https://api.flickr.com/services/feeds/photos_public.gne?tagmode=any&format=json&nojsoncallback=1&tags="
     
     static func getGetRecentUploadsWith(searchTerm: String, completion: @escaping(_ result: [RecentUpload]) -> ()) {
-        guard let url = URL(string: String(format: "%@%@", FlickrAPI.flickrURL, searchTerm)) else {
+        //TODO: Add more sanitizing
+        let sanitizedSearchTerm = searchTerm.replacingOccurrences(of: " ", with: "")
+        guard let url = URL(string: String(format: "%@%@", FlickrAPI.flickrURL, sanitizedSearchTerm)) else {
             print("Invalid URL for Flickr API")
             
             //TODO: Handle invalid searches or commas separated words
             
+            completion([RecentUpload]())
             return
         }
         
@@ -32,7 +35,6 @@ class FlickrAPI {
                 let recentUploadDictionary: Dictionary = try JSONSerialization.jsonObject(with: flickrData, options:[]) as! [String: Any]
                 let items: Array = recentUploadDictionary["items"] as! Array<Any>
                 for i in 0..<items.count {
-                    print("here")
                     //Get the recent upload item by using the init to parse it
                     let recentUploadItem = RecentUpload.init(dict: items[i] as! [String : Any])
                     recentUploads.append(recentUploadItem)
