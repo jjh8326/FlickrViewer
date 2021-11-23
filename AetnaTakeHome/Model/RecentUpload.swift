@@ -42,7 +42,7 @@ class RecentUpload {
         if let _width = RecentUpload.getWidth(apiText: dict["description"] as! String) {
             self.width = _width
         }
-        if let _height = RecentUpload.getWidth(apiText: dict["description"] as! String) {
+        if let _height = RecentUpload.getHeight(apiText: dict["description"] as! String) {
             self.height = _height
         }
         if let _imageDescription = RecentUpload.getImageDescription(apiText: dict["description"] as! String) {
@@ -87,6 +87,7 @@ class RecentUpload {
     
     //TODO: Stress test this class, use indices check
     
+    //TODO: Consider removing these notes, compare code with json
     //Note: I am pretty sure that this data is innaccurate, this may be user entered and not the correct width of the image
     private static func getWidth(apiText: String) -> String? {
         let components = apiText.components(separatedBy: " ")
