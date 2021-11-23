@@ -53,12 +53,8 @@ class ImageSearchViewController: UICollectionViewController {
         
         //TODO: Refactor all cell code into its own class
         
+        cell.imageSizeDesc.text = String(format: "%.0f x %.0f px", searchItem.size.width, searchItem.size.height)
 
-        
-        //Uncomment
-        //cell.imageSizeDesc.text = String(format: "%@ x %@ px", width, height)
-
-        
         //Get download link
         //TODO: Constants
         
@@ -67,20 +63,18 @@ class ImageSearchViewController: UICollectionViewController {
         activityIndicator.frame = cell.bounds
         activityIndicator.startAnimating()
         
-        //Uncomment
-//        let downloadLink = searchItem.media["m"] ?? ""
-//        FlickrAPI.fetchImage(withString: downloadLink) { result in
-//            DispatchQueue.main.async {
-//                activityIndicator.stopAnimating()
-//                cell.imageView.image = result
-//
-//                cell.imageView.layer.borderWidth = 2
-//                cell.imageView.layer.borderColor = UIColor.black.cgColor
-//
-//                //TODO: When new search go to top of view!
-//
-//            }
-//        }
+        FlickrAPI.fetchImage(withString: searchItem.imageLink) { result in
+            DispatchQueue.main.async {
+                activityIndicator.stopAnimating()
+                cell.imageView.image = result
+
+                cell.imageView.layer.borderWidth = 2
+                cell.imageView.layer.borderColor = UIColor.black.cgColor
+
+                //TODO: When new search go to top of view!
+
+            }
+        }
     
         return cell
     }

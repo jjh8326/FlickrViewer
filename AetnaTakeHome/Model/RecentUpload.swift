@@ -102,17 +102,29 @@ class RecentUpload {
         return CGSize(width: width.intValue, height: height.intValue)
     }
     
+    //TODO: Need to use a HTML parser here?
+    //Note: This is a very hard-coded esque way to do things, that being said, since the title is so difficult to retrieve due to random HTML tags in the api text, I do not think a HTML parser would be any less hard-coded
     private static func getImageDescription(apiText: String) -> String? {
-        let components = apiText.components(separatedBy: " ")
-
-        for i in 0..<components.count {
-            let component: String = components[i]
-            if component.contains("alt") {
-                let descriptionComponents = component.components(separatedBy: "\"")
-                return descriptionComponents[1];
-            }
+        //Try to sanitize the HTML text with common tags found in descriptions
+        var sanitized = apiText.replacingOccurrences(of: "</p>", with: "<p>")
+        sanitized = sanitized.replacingOccurrences(of: "&quot;", with: "\"")
+        sanitized = sanitized.replacingOccurrences(of: "<br />", with: "")
+        sanitized = sanitized.replacingOccurrences(of: "&amp;", with: "&")
+        
+        let components = sanitized.components(separatedBy: "<p>")
+        //TODO: Add more things to sanitize the description
+        
+        var description = ""
+        
+        //Check to see if the description is valid
+        //NOTE: There is no great way to get the description, sometimes you get a description with lots of HTML based formatting, if we get one of those we will just discord the description
+        
+//        if !components[components.count - 2].contains("<a href=\"https://www.flickr.com/") && !components[components.count - 2].contains("<") {
+        if !components[components.count - 2].contains("<a href=\"https://www.flickr.com/") {
+            description = components[components.count - 2]
         }
-        return ""
+        
+        return description
     }
     
     private static func getAuthor(apiText: String) -> String? {

@@ -33,11 +33,12 @@ class FlickrAPI {
                 let items: Array = recentUploadDictionary["items"] as! Array<Any>
                 for i in 0..<items.count {
                     print("here")
+                    //Get the recent upload item by using the init to parse it
                     let recentUploadItem = RecentUpload.init(dict: items[i] as! [String : Any])
                     recentUploads.append(recentUploadItem)
                 }
-            
-                //completion(recentUploads)
+                
+                completion(recentUploads)
             } catch let jsonError {
                 print(jsonError)
             }
@@ -51,7 +52,6 @@ class FlickrAPI {
                 if error != nil {
                     print(error!)
                 }
-                
                 if let imageData = data {
                     if let image = UIImage(data: imageData) {
                         completion(image)
