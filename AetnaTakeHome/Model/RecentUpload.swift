@@ -20,12 +20,16 @@ class RecentUpload {
     var imageLink: String = ""
     var dateTaken: String = ""
     var dateUploaded: String = ""
-    var size: CGSize = CGSize(width: 0, height: 0)
+    var width: String = ""
+    var height: String = ""
     var imageDescription: String = ""
     var author: String = ""
     //let tags: String
     
     init(dict: [String: Any]) {
+        
+        //TODO: Handle no title
+        
         if let _title = dict["title"] {
             self.title = _title as! String
         }
@@ -35,8 +39,11 @@ class RecentUpload {
         if let _dateTaken = RecentUpload.getDateFormatted(dateString: dict["date_taken"] as! String) {
             self.dateTaken = _dateTaken
         }
-        if let _size = RecentUpload.getSize(apiText: dict["description"] as! String) {
-            self.size = _size
+        if let _width = RecentUpload.getWidth(apiText: dict["description"] as! String) {
+            self.width = _width
+        }
+        if let _height = RecentUpload.getWidth(apiText: dict["description"] as! String) {
+            self.height = _height
         }
         if let _imageDescription = RecentUpload.getImageDescription(apiText: dict["description"] as! String) {
             self.imageDescription = _imageDescription
@@ -78,28 +85,42 @@ class RecentUpload {
         return dateString
     }
     
-    private static func getSize(apiText: String) -> CGSize? {
+    //TODO: Stress test this class, use indices check
+    
+    private static func getWidth(apiText: String) -> String? {
         let components = apiText.components(separatedBy: " ")
 
-        var heightString = ""
         var widthString = ""
 
         for i in 0..<components.count {
             let component: String = components[i]
             if component.contains("width") {
                 let widthComponents = component.components(separatedBy: "\"")
-                widthString = widthComponents[1];
-            }
-            if component.contains("height") {
-                let heightComponents = component.components(separatedBy: "\"")
-                heightString = heightComponents[1];
+                if widthComponents.indices.contains(1) {
+                    widthString = widthComponents[1];
+                }
             }
         }
         
-        let height = NumberFormatter().number(from: heightString) ?? 0
-        let width = NumberFormatter().number(from: widthString) ?? 0
+        return widthString
+    }
+    
+    private static func getHeight(apiText: String) -> String? {
+        let components = apiText.components(separatedBy: " ")
+
+        var heightString = ""
+
+        for i in 0..<components.count {
+            let component: String = components[i]
+            if component.contains("height") {
+                let widthComponents = component.components(separatedBy: "\"")
+                if widthComponents.indices.contains(1) {
+                    heightString = widthComponents[1];
+                }
+            }
+        }
         
-        return CGSize(width: width.intValue, height: height.intValue)
+        return heightString
     }
     
     //TODO: Need to use a HTML parser here?
@@ -114,7 +135,7 @@ class RecentUpload {
         let components = sanitized.components(separatedBy: "<p>")
         //TODO: Add more things to sanitize the description
         
-        var description = ""
+        var description = "No description provided."
         
         //Check to see if the description is valid
         //NOTE: There is no great way to get the description, sometimes you get a description with lots of HTML based formatting, if we get one of those we will just discord the description
@@ -129,6 +150,11 @@ class RecentUpload {
     
     private static func getAuthor(apiText: String) -> String? {
         let components = apiText.components(separatedBy: "\"")
-        return components[1]
+        
+        if components.indices.contains(1) {
+            return components[1]
+        }
+        
+        return "(Author uknown)"
     }
 }

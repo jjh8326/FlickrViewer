@@ -49,11 +49,11 @@ class ImageSearchViewController: UICollectionViewController {
         cell.backgroundColor = .white
         let searchItem = searchItems[indexPath.row]
         
-        cell.imageTitle.text = searchItem.title
+        cell.imageTitle.attributedText = NSAttributedString(string: searchItem.title, attributes: [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 17.0)])
         
         //TODO: Refactor all cell code into its own class
         
-        cell.imageSizeDesc.text = String(format: "%.0f x %.0f px", searchItem.size.width, searchItem.size.height)
+        cell.imageSizeDesc.text = String(format: "%@ x %@ px", searchItem.width, searchItem.height)
 
         //Get download link
         //TODO: Constants

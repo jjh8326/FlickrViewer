@@ -33,10 +33,24 @@ class ImageDetailViewController: UIViewController {
         
         //Set our anchors to the image width and height (need to pass this in)
         
+        
+        let widthString = self.selectedImage.width
+        let heightString = self.selectedImage.height
+        var width: CGFloat = 0.0
+        var height: CGFloat = 0.0
+        
+        if let w = NumberFormatter().number(from: widthString) {
+            width = CGFloat(truncating: w)
+        }
+        
+        if let h = NumberFormatter().number(from: heightString) {
+            height = CGFloat(truncating: h)
+        }
+        
         //Set the constraints to the image
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: selectedImage.size.width),
-            imageView.heightAnchor.constraint(equalToConstant: selectedImage.size.height)
+            imageView.widthAnchor.constraint(equalToConstant: width),
+            imageView.heightAnchor.constraint(equalToConstant: height)
         ])
         
         
@@ -55,34 +69,55 @@ class ImageDetailViewController: UIViewController {
 
                 //TODO: Using border for debug only
                 //TODO: Consider moving this out of dispatch queue
-                //self.imageView.layer.borderColor = UIColor.black.cgColor
                 //TODO: Attributed text
 
                 self.imageDetails.sizeToFit()
                 
                 self.imageDetails.layer.borderWidth = 2
                 
-                //Created attributed text of the title
-                let attributedImageDescription = NSAttributedString(string: self.selectedImage.imageDescription, attributes: [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 17.0)])
+                //TODO: Make title italicized
                 
 //                self.imageDetails.text = String(format: "%@\n%@\n%@\n%@\n%@\n%@\n", self.selectedImage.title, self.selectedImage.dateTaken, self.selectedImage.dateUploaded, "selectedImage.size", self.selectedImage.imageDescription, self.selectedImage.author)
+                                
+                //Make title italics
+                let imageDetailsAttributedText = NSMutableAttributedString(string: "")
                 
-                let imageDetailsAttributedText = NSMutableAttributedString(string: String(format: "%@\n", self.selectedImage.title))
-                imageDetailsAttributedText.append(attributedImageDescription)
+                if (self.selectedImage.title != "") {
+                    let imageTitleAttributedText = NSMutableAttributedString(string: self.selectedImage.title, attributes: [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 15)])
+                    
+                    imageDetailsAttributedText.append(imageTitleAttributedText)
+                } else {
+                    let imageTitleAttributedText = NSMutableAttributedString(string: "Photo", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)])
+                    
+                    imageDetailsAttributedText.append(imageTitleAttributedText)
+                }
+                
+                let imageAuthorAttributesText = NSAttributedString(string: " by " + self.selectedImage.author + "\n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)])
+                
+                imageDetailsAttributedText.append(imageAuthorAttributesText)
+                
+                //TODO: If description is blank then skip it
+                if (self.selectedImage.imageDescription != "") {
+                    let attributedDescriptionWordText = NSAttributedString(string: "\nDescription: ", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)])
+                    
+                    imageDetailsAttributedText.append(attributedDescriptionWordText)
+                    
+                    //Created attributed text of the title
+                    let attributedImageDescriptionText = NSAttributedString(string: "\"" + self.selectedImage.imageDescription + "\"", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)])
+                    
+                    imageDetailsAttributedText.append(attributedImageDescriptionText)
+                }
+                
+                let attributedSizeWordText = NSAttributedString(string: "\nDimensions: ", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)])
+                
+                imageDetailsAttributedText.append(attributedSizeWordText)
+                
+                let attributedSizeText = NSAttributedString(string: self.selectedImage.width + " by " + self.selectedImage.height + " pixels", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)])
+                
+                imageDetailsAttributedText.append(attributedSizeText)
                 
                 self.imageDetails.attributedText = imageDetailsAttributedText
-                
-//                // create attributed string
-//                let myString = "Swift Attributed String"
-//                let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.blue ]
-//                let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
-//
-//                // set attributed text on a UILabel
-//                myLabel.attributedText = myAttrString
             }
         }
     }
-    
-    
-
 }
