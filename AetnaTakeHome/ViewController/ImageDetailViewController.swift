@@ -9,6 +9,8 @@ import UIKit
 
 class ImageDetailViewController: UIViewController {
     
+    //TODO: Set target back to 15.0
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageDetails: UITextView!
     
@@ -96,14 +98,13 @@ class ImageDetailViewController: UIViewController {
                 
                 imageDetailsAttributedText.append(imageAuthorAttributesText)
                 
-                //TODO: If description is blank then skip it
                 if (self.selectedImage.imageDescription != "") {
-                    let attributedDescriptionWordText = NSAttributedString(string: "\nDescription: ", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)])
-                    
-                    imageDetailsAttributedText.append(attributedDescriptionWordText)
+//                    let attributedDescriptionWordText = NSAttributedString(string: "\nDescription: ", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)])
+//
+//                    imageDetailsAttributedText.append(attributedDescriptionWordText)
                     
                     //Created attributed text of the title
-                    let attributedImageDescriptionText = NSAttributedString(string: "\"" + self.selectedImage.imageDescription + "\"", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)])
+                    let attributedImageDescriptionText = NSAttributedString(string: "\n\"" + self.selectedImage.imageDescription + "\"\n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)])
                     
                     imageDetailsAttributedText.append(attributedImageDescriptionText)
                 }
@@ -116,8 +117,45 @@ class ImageDetailViewController: UIViewController {
                 
                 imageDetailsAttributedText.append(attributedSizeText)
                 
+                if (self.selectedImage.dateTaken != "") {
+                    let attributedDateTakenWordText = NSAttributedString(string: "\nDate Taken: ", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)])
+                    
+                    imageDetailsAttributedText.append(attributedDateTakenWordText)
+                    
+                    let attributedDateTakenText = NSAttributedString(string: self.selectedImage.dateTaken, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)])
+                    
+                    imageDetailsAttributedText.append(attributedDateTakenText)
+                }
+                
+                if (self.selectedImage.dateUploaded != "") {
+                    let attributedDateUploadedWordText = NSAttributedString(string: "\nDate Uploaded: ", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)])
+                    
+                    imageDetailsAttributedText.append(attributedDateUploadedWordText)
+                    
+                    let attributedDateUploadedText = NSAttributedString(string: self.selectedImage.dateUploaded, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)])
+                    
+                    imageDetailsAttributedText.append(attributedDateUploadedText)
+                }
+                
+                let attributedImageLinkText = NSAttributedString(string: "\n\nImage Link", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0), NSAttributedString.Key.link: NSURL(string: self.selectedImage.imageLink) ?? NSURL()])
+                
+                imageDetailsAttributedText.append(attributedImageLinkText)
+        
+                //TODO: Set properties for interfaces using UIBuilder not programatically
+                
                 self.imageDetails.attributedText = imageDetailsAttributedText
             }
         }
     }
 }
+
+//NOTE: The tappable link code does not seem to work in the simulator, I can not test on my phone because it is old and not updated
+extension ImageDetailViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        UIApplication.shared.open(URL)
+        return false
+    }
+}
+
+//var imageLink: String = ""
+////let tags: String

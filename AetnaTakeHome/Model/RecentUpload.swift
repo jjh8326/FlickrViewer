@@ -124,7 +124,7 @@ class RecentUpload {
     }
     
     //TODO: Need to use a HTML parser here?
-    //Note: This is a very hard-coded esque way to do things, that being said, since the title is so difficult to retrieve due to random HTML tags in the api text, I do not think a HTML parser would be any less hard-coded
+    //Note: This is a very hard-coded esque way to do things, that being said, since the description is so difficult to reliably retrieve due to random HTML tags in the api text, I do not think a HTML parser would be any less hard-coded
     private static func getImageDescription(apiText: String) -> String? {
         //Try to sanitize the HTML text with common tags found in descriptions
         var sanitized = apiText.replacingOccurrences(of: "</p>", with: "<p>")
@@ -135,12 +135,11 @@ class RecentUpload {
         let components = sanitized.components(separatedBy: "<p>")
         //TODO: Add more things to sanitize the description
         
-        var description = "No description provided."
+        var description = ""
         
         //Check to see if the description is valid
         //NOTE: There is no great way to get the description, sometimes you get a description with lots of HTML based formatting, if we get one of those we will just discord the description
         
-//        if !components[components.count - 2].contains("<a href=\"https://www.flickr.com/") && !components[components.count - 2].contains("<") {
         if !components[components.count - 2].contains("<a href=\"https://www.flickr.com/") {
             description = components[components.count - 2]
         }
