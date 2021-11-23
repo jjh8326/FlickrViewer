@@ -2,13 +2,17 @@
 //  UIImageExtension.swift
 //  AetnaTakeHome
 //
-//  Created by Joe H on 11/21/21.
+//  Created by Joe H on 11/22/21.
 //
 
 import UIKit
 
+/* Code supplied by:
+* https://stackoverflow.com/questions/2936443/create-new-uiimage-by-adding-shadow-to-existing-uiimage
+*/
+
 extension UIImage {
-    func addShadow(blurSize: CGFloat = 4.0) -> UIImage {
+    func addShadow(blurSize: CGFloat = 6.0) -> UIImage {
         let shadowColor = UIColor(white:0.0, alpha:0.8).cgColor
         
         let context = CGContext(data: nil,

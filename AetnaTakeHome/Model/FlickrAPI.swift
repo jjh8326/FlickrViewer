@@ -24,10 +24,20 @@ class FlickrAPI {
             guard let flickrData = data else {
                 return
             }
+            
+            var recentUploads: [RecentUpload] = [RecentUpload]()
 
             do {
-                let recentUploads = try JSONDecoder().decode(RecentUploads.self, from: flickrData).items
-                completion(recentUploads)
+                //Convert the json into a dictionary
+                let recentUploadDictionary: Dictionary = try JSONSerialization.jsonObject(with: flickrData, options:[]) as! [String: Any]
+                let items: Array = recentUploadDictionary["items"] as! Array<Any>
+                for i in 0..<items.count {
+                    print("here")
+                    let recentUploadItem = RecentUpload.init(dict: items[i] as! [String : Any])
+                    recentUploads.append(recentUploadItem)
+                }
+            
+                //completion(recentUploads)
             } catch let jsonError {
                 print(jsonError)
             }

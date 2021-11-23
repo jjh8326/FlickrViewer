@@ -51,9 +51,13 @@ class ImageSearchViewController: UICollectionViewController {
         
         cell.imageTitle.text = searchItem.title
         
-        //TOOD: Get the dimensions
+        //TODO: Refactor all cell code into its own class
         
-        //cell.imageSizeDesc.text = searchItem.description
+
+        
+        //Uncomment
+        //cell.imageSizeDesc.text = String(format: "%@ x %@ px", width, height)
+
         
         //Get download link
         //TODO: Constants
@@ -63,21 +67,31 @@ class ImageSearchViewController: UICollectionViewController {
         activityIndicator.frame = cell.bounds
         activityIndicator.startAnimating()
         
-        let downloadLink = searchItem.media["m"] ?? ""
-        FlickrAPI.fetchImage(withString: downloadLink) { result in
-            DispatchQueue.main.async {
-                activityIndicator.stopAnimating()
-                cell.imageView.image = result
-                
-                //TODO: Delete shadow code
-                cell.imageView.image = cell.imageView.image?.addShadow()
-                
-                //TODO: When new search go to top of view!
-                
-            }
-        }
+        //Uncomment
+//        let downloadLink = searchItem.media["m"] ?? ""
+//        FlickrAPI.fetchImage(withString: downloadLink) { result in
+//            DispatchQueue.main.async {
+//                activityIndicator.stopAnimating()
+//                cell.imageView.image = result
+//
+//                cell.imageView.layer.borderWidth = 2
+//                cell.imageView.layer.borderColor = UIColor.black.cgColor
+//
+//                //TODO: When new search go to top of view!
+//
+//            }
+//        }
     
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowImageDetails") {
+            if let destination = segue.destination as? ImageDetailViewController,
+               let indexPath = self.collectionView.indexPathsForSelectedItems?.first {
+                destination.selectedImage = searchItems[indexPath.row]
+            }
+        }
     }
 }
 

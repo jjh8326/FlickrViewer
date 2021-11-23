@@ -20,7 +20,9 @@
 		D81A83062749B32500874B0B /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A83052749B32500874B0B /* FlickrAPI.swift */; };
 		D81A830A2749B51A00874B0B /* RecentUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A83092749B51A00874B0B /* RecentUpload.swift */; };
 		D81A830D2749EEE300874B0B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A830C2749EEE300874B0B /* ImageCell.swift */; };
-		D81A8313274AB53D00874B0B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A8312274AB53D00874B0B /* UIImageExtension.swift */; };
+		D84D820A274B8BC20073D2D0 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84D8209274B8BC20073D2D0 /* ImageDetailViewController.swift */; };
+		D8B258D4274C308A007B902B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B258D3274C308A007B902B /* UIImageExtension.swift */; };
+		D8B258D6274C7ADE007B902B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B258D5274C7ADE007B902B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,9 @@
 		D81A83052749B32500874B0B /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		D81A83092749B51A00874B0B /* RecentUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUpload.swift; sourceTree = "<group>"; };
 		D81A830C2749EEE300874B0B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		D81A8312274AB53D00874B0B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		D84D8209274B8BC20073D2D0 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		D8B258D3274C308A007B902B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		D8B258D5274C7ADE007B902B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 		D81A82C12749A87F00874B0B = {
 			isa = PBXGroup;
 			children = (
+				D8B258D5274C7ADE007B902B /* Constants.swift */,
+				D8B258D3274C308A007B902B /* UIImageExtension.swift */,
 				D81A82CC2749A87F00874B0B /* AetnaTakeHome */,
 				D81A82E62749A88100874B0B /* AetnaTakeHomeTests */,
 				D81A82F02749A88100874B0B /* AetnaTakeHomeUITests */,
@@ -109,13 +115,12 @@
 		D81A82CC2749A87F00874B0B /* AetnaTakeHome */ = {
 			isa = PBXGroup;
 			children = (
-				D81A8311274AB51D00874B0B /* Extensions */,
+				D84D820B274B8C300073D2D0 /* ViewController */,
 				D81A830B2749EE9300874B0B /* View */,
 				D81A83082749B4FC00874B0B /* Model */,
 				D81A82CD2749A87F00874B0B /* AppDelegate.swift */,
 				D81A82CF2749A87F00874B0B /* SceneDelegate.swift */,
 				D81A82D32749A87F00874B0B /* Main.storyboard */,
-				D81A83022749B13C00874B0B /* ImageSearchViewController.swift */,
 				D81A82D92749A88100874B0B /* Assets.xcassets */,
 				D81A82DB2749A88100874B0B /* LaunchScreen.storyboard */,
 				D81A82DE2749A88100874B0B /* Info.plist */,
@@ -158,12 +163,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		D81A8311274AB51D00874B0B /* Extensions */ = {
+		D84D820B274B8C300073D2D0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D81A8312274AB53D00874B0B /* UIImageExtension.swift */,
+				D81A83022749B13C00874B0B /* ImageSearchViewController.swift */,
+				D84D8209274B8BC20073D2D0 /* ImageDetailViewController.swift */,
 			);
-			path = Extensions;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,12 +305,14 @@
 			files = (
 				D81A83062749B32500874B0B /* FlickrAPI.swift in Sources */,
 				D81A830D2749EEE300874B0B /* ImageCell.swift in Sources */,
+				D84D820A274B8BC20073D2D0 /* ImageDetailViewController.swift in Sources */,
 				D81A83032749B13C00874B0B /* ImageSearchViewController.swift in Sources */,
 				D81A82D82749A87F00874B0B /* AetnaTakeHome.xcdatamodeld in Sources */,
+				D8B258D6274C7ADE007B902B /* Constants.swift in Sources */,
+				D8B258D4274C308A007B902B /* UIImageExtension.swift in Sources */,
 				D81A82CE2749A87F00874B0B /* AppDelegate.swift in Sources */,
 				D81A82D02749A87F00874B0B /* SceneDelegate.swift in Sources */,
 				D81A830A2749B51A00874B0B /* RecentUpload.swift in Sources */,
-				D81A8313274AB53D00874B0B /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +497,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,6 +526,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
