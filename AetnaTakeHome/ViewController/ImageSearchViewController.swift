@@ -8,10 +8,7 @@
 import UIKit
 
 class ImageSearchViewController: UICollectionViewController {
-    
-    private let reuseIdentifier = "viewCell"
     private var searchItems: [RecentUpload] = [RecentUpload]()
-    
     private let itemsPerRow: CGFloat = 1
     
     private let sectionInsets = UIEdgeInsets(
@@ -44,42 +41,16 @@ class ImageSearchViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.imageSearchReuseIdentifier, for: indexPath) as! ImageCell
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCell
-    
-        // Configure the cell
-        cell.backgroundColor = .white
         let searchItem = searchItems[indexPath.row]
+        //Configure the cell
+        cell.configureCell(searchItem: searchItem)
         
-        cell.imageTitle.attributedText = NSAttributedString(string: searchItem.title, attributes: [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 17.0)])
-        
-        //TODO: Refactor all cell code into its own class
-        
-        cell.imageSizeDesc.text = String(format: "%@ x %@ px", searchItem.width, searchItem.height)
-
-        //Get download link
-        //TODO: Constants
-        
-        let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-        cell.addSubview(activityIndicator)
-        activityIndicator.frame = cell.bounds
-        activityIndicator.startAnimating()
-        
-        FlickrAPI.fetchImage(withString: searchItem.imageLink) { result in
-            DispatchQueue.main.async {
-                activityIndicator.stopAnimating()
-                cell.imageView.image = result
-
-                cell.imageView.layer.borderWidth = 2
-                cell.imageView.layer.borderColor = UIColor.black.cgColor
-
-                //TODO: When new search go to top of view!
-
-            }
-        }
-    
         return cell
     }
+    
+    //TODO: Constants
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ShowImageDetails") {
@@ -110,6 +81,11 @@ extension ImageSearchViewController: UITextFieldDelegate {
             DispatchQueue.main.async {
                 activityIndicator.removeFromSuperview()
                 self.collectionView.reloadData()
+                
+                //Scroll the collection view to the top when a search is complete
+                if self.searchItems.count != 0 {
+                    self.collectionView.setContentOffset(CGPoint(x:0,y:0), animated: true)
+                }
             }
         }
         
